@@ -99,6 +99,11 @@ public class RoomReservationServiceTest {
 
         when(repository.existsByReservationCode(roomCode)).thenReturn(true);
 
+
+        //cambios
+
+        //cabm++bmios
+
         // Act & Assert
         IllegalStateException ex = assertThrows(IllegalStateException.class,
                 () -> service.createReservation(roomCode, email, hours));
