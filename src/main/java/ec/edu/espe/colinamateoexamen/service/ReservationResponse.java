@@ -1,23 +1,18 @@
-package ec.edu.espe.colinamateoexamen.model;
+package ec.edu.espe.colinamateoexamen.service;
 
-import java.util.UUID;
-
-public class RoomReservation {
-
+public class ReservationResponse {
     private final String id;
     private final String roomCode;
     private final String reservedEmail;
     private final double hours;
     private final String status;
 
-
-    public RoomReservation(String roomCode, String reservedEmail, double hours, String status) {
-        this.id = UUID.randomUUID().toString();
+    public ReservationResponse(String id, String roomCode, String reservedEmail, double hours, String status) {
+        this.id = id;
         this.roomCode = roomCode;
         this.reservedEmail = reservedEmail;
         this.hours = hours;
         this.status = status;
-
     }
 
     public String getId() {
@@ -39,5 +34,4 @@ public class RoomReservation {
     public String getStatus() {
         return status;
     }
-
 }
